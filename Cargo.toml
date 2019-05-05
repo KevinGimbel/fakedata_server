@@ -1,0 +1,9 @@
+[package]
+name = "fakedata_server"
+version = "0.1.0"
+authors = ["Kevin Gimbel <hallo@kevingimbel.com>"]
+edition = "2018"
+
+[dependencies]
+rocket = "0.4.0"
+fakedata_generator = "0.2.2"
