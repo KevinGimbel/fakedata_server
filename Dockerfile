@@ -1,12 +1,8 @@
-FROM rustlang/rust:nightly
-
-LABEL Maintainer="Kevin Gimbel"
-
-WORKDIR /usr/src/fakedata_server
+FROM clux/muslrust:nightly as builder
+WORKDIR /volume
 COPY . .
+RUN cargo build --release
 
-RUN cargo install --path .
-
-EXPOSE 8000
-
-CMD ["fakedata_server"]
+FROM scratch
+COPY --from=builder /volume/target/x86_64-unknown-linux-musl/release/fakedata_server .
+ENTRYPOINT [ "/fakedata_server" ]

@@ -1,0 +1,6 @@
+target
+.gitignore
+Dockerfile
+fakedata_server.iml
+LICENSE
+README.md
