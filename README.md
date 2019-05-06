@@ -48,6 +48,7 @@ $ curl localhost:8000/gen/username
 $ curl localhost:8000/gen/domain 
 ```
 ## Known issues
+[⬆️ Back to Top](#table-of-contents)
 
 * For some reason the index route binds to `localhost:8000/` with a `/` at the end but not to `localhost:8000` (no `/`).
 
