@@ -13,6 +13,7 @@
 ## About
 [⬆️ Back to Top](#table-of-contents)
 
+`fakedata_server` is a showcase API implementing "[fakedata_generator](https://github.com/kevingimbel/fakedata_generator) as a service". It provides an "API" that can return random data (one entry at a time) for GET requests.
 
 ## Usage
 [⬆️ Back to Top](#table-of-contents)
@@ -41,6 +42,11 @@ The container cannot be exited with `CTRL-C`, see [Known issues](#known-issues).
 
 After starting the server in either of the two ways listed above, you can access [http://localhost:8000/](http://localhost:8000/). The `/` is required, see [Known issues](#known-issues).
 
+```
+$ curl localhost:8000/gen/corpora/cat
+$ curl localhost:8000/gen/username
+$ curl localhost:8000/gen/domain 
+```
 ## Known issues
 
 * For some reason the index route binds to `localhost:8000/` with a `/` at the end but not to `localhost:8000` (no `/`).
