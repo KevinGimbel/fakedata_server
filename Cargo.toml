@@ -5,5 +5,5 @@ authors = ["Kevin Gimbel <hallo@kevingimbel.com>"]
 edition = "2018"
 
 [dependencies]
-rocket = "0.4.0"
+rocket = "0.4.7"
 fakedata_generator = "0.2.2"
